@@ -1,0 +1,10 @@
+body {
+  font-family: Verdana, Arial, sans-serif;
+  margin: 30px;
+  /* border: red 5px solid; */
+}
+
+a {
+  color: #136cb2;
+  text-decoration: none;
+}

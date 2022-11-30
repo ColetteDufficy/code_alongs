@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{%   block content  %}
+
+<!-- This is where our list of tasks will appear. -->
+
+{% for task in all_tasks %}
+  <div class="task">
+    <div class="content">
+      {{task.user.first_name}}
+      <div class="description">
+        {{task.description}}
+        <span class="duration">{{task.duration}} mins</span>
+      </div>
+      <div class="buttons">
+
+        <!-- DELETE BUTTON -->
+        <form class="delete-form" action="/tasks/{{task.id}}/delete" method="POST"> <!-- NEW -->
+            <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button> <!-- NEW -->
+          </form> 
+
+          
+        {% if task.completed == True %}
+          <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
+        {% else %}
+          <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  
+{% endfor %}
+
+
+{%   endblock  %}

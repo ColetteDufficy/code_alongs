@@ -1,0 +1,9 @@
+.more-releases {
+  /* border-color: black;
+  border-style: solid;
+  border-width: 1px; */
+  border: black 1px solid;
+  padding: 15px 20px;
+  background-color: #a0c4e0;
+  margin-top: 10px;
+}

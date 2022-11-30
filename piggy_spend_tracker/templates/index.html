@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="index_page_top">
+
+    <section class="main_total_amount">
+        <p>Welcome back!</p>
+        <p>Your total spend so far is:</p>
+        <!-- keeping the snout and total together in the div piggie-snout-total-wrapper -->
+        <section class = "snout_and_total_container">
+            <!-- this is the class containing the image - the url is in the css file -->
+            <section class = "snout_logo_watermark"> </section> 
+                <h1>£{{total}}</h1>
+        </section>
+    </section>
+    
+    <!-- link to the transaction page -->
+    <p><a href="/transactions">Click to see or add a new transaction</a></p>
+
+<!-- end of the index_page_top class -->
+</section>
+
+
+<!-- 3 little piggies at the bottom of the page -->
+    <section class="piggie_image ">
+        <img src="/static/images/little_pigs_3.png" alt="3 little piggies image" height="70%">
+    </section>
+
+   
+
+
+{% endblock %}
+
